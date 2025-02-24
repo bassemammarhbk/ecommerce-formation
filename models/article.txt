@@ -1,0 +1,12 @@
+const mongoose = require("mongoose") ;
+const Scategorie = require("./scategorie.js") ;
+const articleSchema = mongoose.Schema({
+    designation : {type : String , required : true , unique : true } ,
+    reference : {type : String , required : true , unique : true } ,
+    marque : {type : String , required : false } ,
+    qtesctock : {type : Number},
+    prix : {type: Number},
+    imageart : {type : String},
+    scategoreID : {type: mongoose.Schema.Types.ObjectId, ref : Scategorie}
+})
+module.exports = mongoose.model("article",articleSchema);
