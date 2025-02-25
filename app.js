@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 const dotenv = require('dotenv')
 const CategorieRouter =require("./routes/categorie.route")
 const ScategorieRouter =require("./routes/scategorie.route")
-const articles =require("./models/article")
+const articles =require("./routes/article.route")
 const chatbotRouter=require("./routes/chatbot.route")
 const app = express ()
 app.use (express.json())
@@ -25,4 +25,4 @@ app.use("/api/chat",chatbotRouter)
 app.listen(4000,()=>{
     console.log(`Serveur is listen on port ${process.env.PORT}`)
 })
-module.exports=app ; 
+module.exports=app ;
