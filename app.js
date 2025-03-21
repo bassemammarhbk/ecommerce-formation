@@ -35,7 +35,7 @@ app.use('/api/payment', paymentRouter);
 app.use(express.static(path.join(__dirname, './client/build'))); // Route pour les pages non trouvées, redirige vers index.html
 app.get('*', (req, res) => { res.sendFile(path.join(__dirname,'./client/build/index.html')); });
 
-//serveur
+//serveur²
 app.listen(4000,()=>{
     console.log(`Serveur is listen on port ${process.env.PORT}`)
 })
